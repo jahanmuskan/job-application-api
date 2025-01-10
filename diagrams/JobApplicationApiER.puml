@@ -1,0 +1,41 @@
+@startuml
+' Enable entity relationship diagram mode
+!define ER_DIAGRAM
+
+entity JobPosting {
+    * id : Long
+    --
+    title : String
+    description : String
+    companyName : String
+    location : String
+    salary : String
+    postedDate : LocalDate
+    closingDate : LocalDate
+    requirements : List<String>
+}
+
+entity Applicant {
+    * id : Long
+    --
+    firstName : String
+    lastName : String
+    email : String
+    phoneNumber : String
+    resume : String
+    skills : List<String>
+}
+
+entity JobApplication {
+    * id : Long
+    --
+    jobId : Long
+    applicantId : Long
+    applicationDate : LocalDate
+    status : String
+}
+
+JobPosting ||--o{ JobApplication : "has many"
+Applicant ||--o{ JobApplication : "submits many"
+
+@enduml
