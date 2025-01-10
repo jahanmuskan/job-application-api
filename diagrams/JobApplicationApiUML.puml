@@ -1,0 +1,38 @@
+@startuml
+
+package "Job Application API" {
+
+  class JobPosting {
+    + Long id
+    + String title
+    + String description
+    + String companyName
+    + String location
+    + String salary
+    + LocalDate postedDate
+    + LocalDate closingDate
+    + List<String> requirements
+  }
+
+  class Applicant {
+    + Long id
+    + String firstName
+    + String lastName
+    + String email
+    + String phoneNumber
+    + String resume
+    + List<String> skills
+  }
+
+  class JobApplication {
+    + Long id
+    + Long jobId
+    + Long applicantId
+    + LocalDate applicationDate
+    + String status
+  }
+
+  JobPosting "1" --> "*" JobApplication : has
+  Applicant "1" --> "*" JobApplication : submits
+}
+@enduml
