@@ -34,6 +34,5 @@ package "Job Application API" {
 
   JobPosting "1" --> "*" JobApplication : has
   Applicant "1" --> "*" JobApplication : submits
-
 }
 @enduml

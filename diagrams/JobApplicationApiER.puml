@@ -37,5 +37,4 @@ entity JobApplication {
 
 JobPosting ||--o{ JobApplication : "has many"
 Applicant ||--o{ JobApplication : "submits many"
-
 @enduml
