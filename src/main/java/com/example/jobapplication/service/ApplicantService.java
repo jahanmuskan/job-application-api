@@ -22,11 +22,11 @@ public class ApplicantService {
         return repository.findAll();
     }
 
-    public Applicant findApplicantById(Long id){
+    public Applicant getApplicantById(Long id){
         return repository.findById(id).orElseThrow(() -> new RuntimeException("Applicant not found"));
     }
 
-    public void deleteById(Long id){
+    public void deleteApplicantById(Long id){
         repository.deleteById(id);
     }
 }
