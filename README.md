@@ -26,7 +26,7 @@ This project is a REST API for managing job postings, applicants, and job applic
 ### Steps to Run the Application
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone <[repository-url](https://github.com/jahanmuskan/job-application-api)>
    cd job-application-api
    ```
 2. Build the project using Maven:
