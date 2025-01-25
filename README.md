@@ -12,7 +12,7 @@ This project is a REST API for managing job postings, applicants, and job applic
 - Java 17
 - Spring Boot
 - Spring Data JPA
-- H2 Database (in-memory database for testing)
+- Hibernate
 - Maven
 - Postman (for testing APIs)
 
